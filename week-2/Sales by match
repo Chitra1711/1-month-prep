@@ -1,0 +1,27 @@
+class Result {
+
+    /*
+     * Complete the 'sockMerchant' function below.
+     *
+     * The function is expected to return an INTEGER.
+     * The function accepts following parameters:
+     *  1. INTEGER n
+     *  2. INTEGER_ARRAY ar
+     */
+
+    public static int sockMerchant(int n, List<Integer> ar) {
+    int count = 0;
+    List<Integer> list = new ArrayList<>();
+    for(int i = 0 ; i < n ; i++){
+        if(list.contains(ar.get(i))){
+            list.remove(ar.get(i));
+            count++;
+        }
+        else{
+            list.add(ar.get(i));
+        }
+    }
+    return count ;
+    }
+
+}
